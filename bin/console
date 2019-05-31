@@ -1,0 +1,18 @@
+#!/usr/bin/php
+<?php
+
+require_once __DIR__ . '/../vendor/autoload.php';
+
+use Symfony\Component\Console\Application;
+
+$application = new Application('Gifting Console Helper', 0.1);
+
+$path = realpath(__DIR__ . '/../src/Gifting/Application/Console');
+
+foreach (scandir($path) as $entry) {
+    if ($entry == '.' || $entry == '..') continue;
+    $class = 'Gifting\\Application\\Console\\' . substr($entry, 0, -4);
+    $application->add(new $class());
+}
+
+$application->run();

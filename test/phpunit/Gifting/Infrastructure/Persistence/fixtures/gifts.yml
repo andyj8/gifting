@@ -1,0 +1,65 @@
+gifts:
+  -
+    # NOT due for delivery - already DELIVERED
+    id: 1
+    created: "2010-01-01 00:00:00"
+    type: "egift"
+    voucher_code: "AAAA-AAAA-AAAA"
+    voucher_expiry: "2050-01-01"
+    sender: '{"name":"Sender", "email":"sender@test.com", "order_id":"ABC"}'
+    recipient: '{"name":"Recipient", "email":"recipient@test.com"}'
+    product: '{"sku":"sku", "name":"name", "type":"magazine", "image_url":"jpg"}'
+    delivery_date: "2020-01-01"
+    message: "Test"
+    style_ref: "test"
+    price: 0.00
+  -
+    # NOT due for delivery - already REDEEMED
+    id: 2
+    created: "2010-01-01 00:00:00"
+    type: "egift"
+    voucher_code: "BBBB-BBBB-BBBB"
+    voucher_expiry: "2050-01-01"
+    sender: '{"name":"Sender", "email":"sender@test.com", "order_id":"ABC"}'
+    recipient: '{"name":"Recipient", "email":"recipient@test.com"}'
+    product: '{"sku":"sku", "name":"name", "type":"magazine", "image_url":"jpg"}'
+    delivery_date: "2020-01-01"
+    message: "Test"
+    style_ref: "test"
+    price: 0.00
+  -
+    # DUE for delivery
+    id: 3
+    created: "2010-01-01 00:00:00"
+    type: "egift"
+    voucher_code: "CCCC-CCCC-CCCC"
+    voucher_expiry: "2050-01-01"
+    sender: '{"name":"Sender", "email":"sender@test.com", "order_id":"ABC"}'
+    recipient: '{"name":"Recipient", "email":"recipient@test.com"}'
+    product: '{"sku":"sku", "name":"name", "type":"magazine", "image_url":"jpg"}'
+    delivery_date: "2020-01-01"
+    message: "Test"
+    style_ref: "test"
+    price: 0.00
+
+deliveries:
+  -
+    id: 1
+    gift_id: 1
+    request: ""
+    response: ""
+    success: "t"
+    attempted: "2010-01-01"
+  -
+    id: 2
+    gift_id: 2
+    request: ""
+    response: ""
+    success: "f"
+    attempted: "2010-01-01"
+
+redemptions:
+  -
+    redeemed_at: "2010-01-01"
+    gift_id: 2
+    client_ip: "192.13.15.35"

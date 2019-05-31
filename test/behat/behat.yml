@@ -1,0 +1,11 @@
+default:
+
+    autoload:
+        - %paths.base%/context_files/
+
+    suites:
+
+        main:
+            paths:    [ %paths.base%/../../features/ ]
+            filters:  { tags: ~wip }
+            contexts: [ \Gifting\Test\Behat\ServiceLevel\FeatureContext ]

@@ -1,0 +1,40 @@
+{
+  "name": "ebs/ents_gifting",
+  "require": {
+    "php":                      ">=5.5.0",
+    "slim/slim":                "2.6.2",
+    "pimple/pimple":            "2.1.1"
+  },
+  "require-dev": {
+    "phpunit/phpunit":          "~4.7.7",
+    "phpunit/dbunit":           "1.4.1",
+    "mockery/mockery":          "0.9.3",
+    "behat/behat":              "dev-master#7f6512ed19972a6a25dd20b1d80d083083ade14a",
+    "doctrine/migrations":      "1.0.0",
+    "kriswallsmith/buzz":       "0.15",
+    "symfony/console":          "2.6.7",
+    "symfony/event-dispatcher": "2.6.7",
+    "monolog/monolog":          "1.15.0",
+    "ebs/ents-mq":              "dev-master",
+    "ebs/ents-email":           "dev-master",
+    "ebs/mandrill":             "dev-master"
+  },
+  "autoload": {
+    "psr-0": {
+      "Gifting": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-0": {
+      "Gifting": "src-dev/"
+    },
+    "psr-4": {
+      "Gifting\\Test\\Behat\\": "test/behat/context_files/"
+    }
+  },
+  "repositories": [
+    {"type": "git", "url": "https://github.com/anobii/ents-mq.git"},
+    {"type": "git", "url": "https://github.com/anobii/ents-email.git"},
+    {"type": "git", "url": "https://github.com/anobii/mandrill.git"}
+  ]
+}
